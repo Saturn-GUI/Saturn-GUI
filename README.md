@@ -1,6 +1,4 @@
-## Hi there 👋
 
-<!--
 **Saturn-GUI/Saturn-GUI** is a ✨ _special_ ✨ repository because its `GRILLED` 
 
 Here are some ideas to get you started:
@@ -12,5 +10,5 @@ Here are some ideas to get you started:
 - 💬 Ask me about ... WHY DONT I ADD EXPLOITS
 - 📫 How to reach me: ... GRILLING PANCAKES
 - 😄 Pronouns: ... JOHNATHON TOE
-- ⚡ Fun fact: ... IM DOE NOY TOE
+- ⚡ Fun fact: ... IM DOE NOTHING ABOUT TOE
 -->
