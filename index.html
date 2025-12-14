@@ -80,11 +80,11 @@
             padding: 10px 20px;
         }
     </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.rings.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.rings.min.js"></script>
 </head>
 <body>
-    <div id="background"></div>
+    <div id="background" style="background: linear-gradient(135deg, #1e3a8a 0%, #7c3aed 100%);"></div>
     
     <div id="content-overlay">
         <button onclick="window.location.href = 'view-source:https://classroom.google.com'">
@@ -114,19 +114,23 @@
 
     <script>
         // Initialize Vanta background
-        window.addEventListener("DOMContentLoaded", () => {
-            if (window.VANTA) {
-                window.VANTA.RINGS({
-                    el: "#background",
-                    mouseControls: true,
-                    touchControls: true,
-                    gyroControls: false,
-                    minHeight: 200.0,
-                    minWidth: 200.0,
-                    scale: 1.0,
-                    scaleMobile: 1.0,
-                });
-            }
+        window.addEventListener("load", function() {
+            setTimeout(() => {
+                if (window.VANTA && window.VANTA.RINGS) {
+                    window.VANTA.RINGS({
+                        el: "#background",
+                        mouseControls: true,
+                        touchControls: true,
+                        gyroControls: false,
+                        minHeight: 200.0,
+                        minWidth: 200.0,
+                        scale: 1.0,
+                        scaleMobile: 1.0,
+                        color: 0x00ff88,
+                        waveHeight: 20
+                    });
+                }
+            }, 500);
         });
 
         // Open Multiple Emails function
