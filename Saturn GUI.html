@@ -1,0 +1,56 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <title>Saturn GUI</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Geom:ital,wght@0,300..900;1,300..900&display=swap');
+      * {
+        font-family: Geom;
+        margin: 0;
+        padding: 0;
+      }
+      #background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      button {
+        background-color: #4caf50;
+        color: white;
+        padding: 15px 32px;
+        border: none;
+        cursor: pointer;
+        border-radius: 8px;
+        margin-top: 5px;
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.rings.min.js"></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        if (window.VANTA) {
+          window.VANTA.RINGS({
+            el: "#background",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.0,
+            minWidth: 200.0,
+            scale: 1.0,
+            scaleMobile: 1.0,
+          });
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div id="background"></div>
+    <!-- Add this new div with an H1 heading -->
+    <div id="content-overlay" style="position: absolute; top: 100px; left: 20px; color: white; z-index: 100">
+      <h1>Saturn GUI</h1>
+      <button onclick="window.location.href = 'Exploits.html'">Games</button>
+    </div>
+  </body>
+</html>
