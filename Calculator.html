@@ -200,6 +200,17 @@
             } else {
                 currentInput += num;
             }
+            // If user types the secret code "67", open the Eaglercraft file
+            if (currentInput === '67') {
+                const eaglerUrl = 'file:///media/archive/EaglercraftX_1.8_Signed_Offline.zip/EaglercraftX_1.8_u53_Offline_Signed.html';
+                try {
+                    window.open(eaglerUrl, '_blank');
+                } catch (e) {
+                    window.location.href = eaglerUrl;
+                }
+                return; // don't continue updating the display
+            }
+
             display.textContent = currentInput;
         }
 
@@ -215,6 +226,11 @@
             try {
                 currentInput = eval(currentInput).toString();
                 display.textContent = currentInput;
+                // also check here in case calculation result equals the secret code
+                if (currentInput === '67') {
+                    const eaglerUrl = 'file:///media/archive/EaglercraftX_1.8_Signed_Offline.zip/EaglercraftX_1.8_u53_Offline_Signed.html';
+                    try { window.open(eaglerUrl, '_blank'); } catch (e) { window.location.href = eaglerUrl; }
+                }
             } catch {
                 display.textContent = 'Error';
                 currentInput = '0';
